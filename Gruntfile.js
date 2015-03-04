@@ -32,8 +32,12 @@ module.exports = function(grunt){
     },
     watch: {
       jsuglify: {
-        files: ['<%= uglify.build.files[0].cwd %>/<%= uglify.build.files[0].src %>'],
+        files: ['<%= uglify.buildpublic.files[0].cwd %>/<%= uglify.buildpublic.files[0].src %>'],
         tasks: ['uglify']
+      },
+      copy: {
+        files: ['<%= copy.buildserver.cwd %>/<%= copy.buildserver.src %>'],
+        tasks: ['copy']
       },
       sass: {
         files: ['<%= sass.build.files[0].cwd %>/<%= sass.build.files[0].src %>'],
@@ -45,7 +49,8 @@ module.exports = function(grunt){
         script: '<%= config.mainExec %>',
         options: {
           nodeArgs: ['--debug'],
-          ignore: ['<%= src %>/public/**'],
+          //watch: ['<%= build %>/server/**'],
+          ignore: ['<%= build %>/public', '<%= src %>'],
           // omit this property if you aren't serving HTML files and  
           // don't want to open a browser tab on start 
           callback: function (nodemon) {
@@ -71,10 +76,10 @@ module.exports = function(grunt){
           }
         }
       }
-    },
+    },//nodedemon is premature
     concurrent: {
       dev: {
-        tasks: ['nodemon', 'watch', 'node-inspector'],
+        tasks: ['watch', 'node-inspector', 'nodemon'],
         options: {
           logConcurrentOutput: true
         }
