@@ -1,0 +1,15 @@
+{
+  "src": "src",
+  "build": "build",
+  
+  "publicJsSrc": "src/public/js",
+  "publicJsBuild": "build/public/js",
+
+  "serverJsSrc": "src/server",
+  "serverJsBuild": "build/server",
+  
+  "publicSassSrc": "src/public/sass",
+  "publicSassBuild": "build/public/css",
+  
+  "mainExec": "build/server/app.js"
+}

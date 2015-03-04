@@ -1,0 +1,28 @@
+{
+  "name": "Mean Bootstrapped /w Grunt",
+  "version": "1.0.0",
+  "description": "A MEAN stack project bootstrapped for quick and easy builds",
+  "main": "build/server/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-concurrent": "^1.0.0",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-contrib-copy": "^0.8.0",
+    "grunt-contrib-sass": "^0.9.2",
+    "grunt-contrib-uglify": "^0.8.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-node-inspector": "^0.1.6",
+    "grunt-nodemon": "^0.4.0"
+  },
+  "dependencies": {
+    "body-parser": "^1.12.0",
+    "express": "^4.12.2",
+    "mongodb-uri": "^0.9.7",
+    "mongoose": "^3.8.24"
+  }
+}
