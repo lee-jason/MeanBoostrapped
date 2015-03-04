@@ -51,6 +51,7 @@ module.exports = function(grunt){
           nodeArgs: ['--debug'],
           //watch: ['<%= build %>/server/**'],
           ignore: ['<%= build %>/public', '<%= src %>'],
+          delay: 1500,
           // omit this property if you aren't serving HTML files and  
           // don't want to open a browser tab on start 
           callback: function (nodemon) {
@@ -76,7 +77,7 @@ module.exports = function(grunt){
           }
         }
       }
-    },//nodedemon is premature
+    },//nodedemon is prematurely firing make sure it runs after, delay is not a good substitute
     concurrent: {
       dev: {
         tasks: ['watch', 'node-inspector', 'nodemon'],

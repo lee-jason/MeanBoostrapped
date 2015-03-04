@@ -17,5 +17,5 @@
   });
   
   app.listen(port);
-  console.log('server restarted server fuck!!');
+  console.log('server restarted !!');
 })();
