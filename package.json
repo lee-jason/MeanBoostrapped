@@ -1,5 +1,5 @@
 {
-  "name": "Mean Bootstrapped /w Grunt",
+  "name": "MeanBootstrapped",
   "version": "1.0.0",
   "description": "A MEAN stack project bootstrapped for quick and easy builds",
   "main": "build/server/app.js",
