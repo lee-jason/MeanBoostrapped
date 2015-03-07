@@ -4,8 +4,8 @@ I dunno what to call this bootstrapped thing.
 grab files with a git clone,
 
 install with   
-$ npm install
+$ npm install   
 build project with   
-$ grunt build
+$ grunt build   
 watch project while developing with
-$ grunt
+$ grunt   
